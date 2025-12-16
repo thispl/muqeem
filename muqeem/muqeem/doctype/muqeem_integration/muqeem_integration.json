@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "creation": "2024-05-12 12:44:51.027109",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "description",
+  "tab_break_pfzw",
+  "enable_muqeem_integration",
+  "user",
+  "password"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "HTML",
+   "label": "Description",
+   "options": "<p>Muqeem is an online portal created to facilitate the official documentation process for Saudi Arabia residents, provide data for the employers on their resident workers, and perform various visa and Iqama-related services.</p>\n<p>Muqeem&rsquo;s service allow organization to review their resident workers&rsquo; data and update their transactions completely online.</p>\n<p>By Activating Muqeem&rsquo;s Integration, you can perform below activities through TEN HRPRO</p>\n<ul>\n<li>View Iqama details</li>\n<li>Issue an Iqama</li>\n<li>Renew an Iqama</li>\n<li>Transfer Iqama</li>\n<li>Issue Exit/Re-entry Visa</li>\n<li>Cancel Exit/Re-entry Visa</li>\n<li>Extend Exit/Re-entry Visa</li>\n<li>Reprint Exit/Re-entry Visa</li>\n<li>Issue Final Exit Visa</li>\n<li>Cancel Final Exit Visa</li>\n<li>Extend the validity of a Passport</li>\n<li>Renew Passport</li>\n</ul>"
+  },
+  {
+   "fieldname": "tab_break_pfzw",
+   "fieldtype": "Tab Break",
+   "label": "Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_muqeem_integration",
+   "fieldtype": "Check",
+   "label": "Enable Muqeem Integration"
+  },
+  {
+   "depends_on": "enable_muqeem_integration",
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "label": "User"
+  },
+  {
+   "depends_on": "enable_muqeem_integration",
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-12 14:00:28.740185",
+ "modified_by": "Administrator",
+ "module": "Muqeem",
+ "name": "Muqeem Integration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

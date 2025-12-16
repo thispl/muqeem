@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:iqama_no",
+ "creation": "2024-05-12 14:15:37.315984",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "action_on",
+  "iqama_tab",
+  "section_break_vzhw",
+  "status",
+  "column_break_dham",
+  "iqama_pdf",
+  "section_break_jtop",
+  "employee",
+  "employee_name",
+  "nationality",
+  "iqama_no",
+  "employment_no",
+  "action_type",
+  "occupation_on_iqama",
+  "column_break_jkqc",
+  "version_no",
+  "border_no",
+  "iqama_issued_date",
+  "iqama_expiry_date",
+  "passort_no",
+  "passport_issued_date",
+  "passport_expiry_date",
+  "section_break_msaz",
+  "muqeem_status",
+  "column_break_vujb",
+  "muqeem_response",
+  "exit_reentry_tab",
+  "visa_no",
+  "visa_type",
+  "column_break_dxnf",
+  "return_before_date",
+  "visa_duration",
+  "final_exit_visa_tab",
+  "final_exit_date",
+  "passport_tab",
+  "new_passport_no",
+  "new_passport_issue_date",
+  "new_passport_expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nExpired\nExpires Soon"
+  },
+  {
+   "fieldname": "column_break_dham",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iqama_pdf",
+   "fieldtype": "Attach",
+   "label": "Iqama PDF"
+  },
+  {
+   "fieldname": "section_break_jtop",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "iqama_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Iqama No",
+   "mandatory_depends_on": "eval:doc.action_on == 'Iqama'",
+   "unique": 1
+  },
+  {
+   "fieldname": "employment_no",
+   "fieldtype": "Data",
+   "label": "Employment No"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "\nIssue\nRenew\nTransfer"
+  },
+  {
+   "fieldname": "occupation_on_iqama",
+   "fieldtype": "Data",
+   "label": "Occupation on Iqama"
+  },
+  {
+   "fieldname": "column_break_jkqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "version_no",
+   "fieldtype": "Data",
+   "label": "Version No"
+  },
+  {
+   "fieldname": "border_no",
+   "fieldtype": "Data",
+   "label": "Border No"
+  },
+  {
+   "fieldname": "iqama_issued_date",
+   "fieldtype": "Date",
+   "label": "Iqama Issued Date"
+  },
+  {
+   "fieldname": "iqama_expiry_date",
+   "fieldtype": "Date",
+   "label": "Iqama Expiry Date"
+  },
+  {
+   "fieldname": "passort_no",
+   "fieldtype": "Data",
+   "label": "Passort No"
+  },
+  {
+   "fieldname": "passport_issued_date",
+   "fieldtype": "Date",
+   "label": "Passport Issued Date"
+  },
+  {
+   "fieldname": "passport_expiry_date",
+   "fieldtype": "Date",
+   "label": "Passport Expiry Date"
+  },
+  {
+   "fieldname": "section_break_msaz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "muqeem_status",
+   "fieldtype": "Data",
+   "label": "Muqeem Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vujb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "muqeem_response",
+   "fieldtype": "Long Text",
+   "label": "Muqeem Response",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.action_on == 'Iqama'",
+   "fieldname": "iqama_tab",
+   "fieldtype": "Tab Break",
+   "label": "Iqama"
+  },
+  {
+   "depends_on": "eval:doc.action_on == 'Exit Re-Entry Visa'",
+   "fieldname": "exit_reentry_tab",
+   "fieldtype": "Tab Break",
+   "label": "Exit Re-Entry Visa"
+  },
+  {
+   "depends_on": "eval:doc.action_on == 'Final Exit Visa'",
+   "fieldname": "final_exit_visa_tab",
+   "fieldtype": "Tab Break",
+   "label": "Final Exit Visa"
+  },
+  {
+   "depends_on": "eval:doc.action_on == 'Passport'",
+   "fieldname": "passport_tab",
+   "fieldtype": "Tab Break",
+   "label": "Passport"
+  },
+  {
+   "fieldname": "section_break_vzhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visa_no",
+   "fieldtype": "Data",
+   "label": "Visa No"
+  },
+  {
+   "fieldname": "visa_type",
+   "fieldtype": "Data",
+   "label": "Visa Type"
+  },
+  {
+   "fieldname": "column_break_dxnf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_before_date",
+   "fieldtype": "Date",
+   "label": "Return Before Date"
+  },
+  {
+   "fieldname": "visa_duration",
+   "fieldtype": "Data",
+   "label": "Visa Duration"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "final_exit_date",
+   "fieldtype": "Date",
+   "label": "Final Exit Date"
+  },
+  {
+   "fieldname": "new_passport_no",
+   "fieldtype": "Data",
+   "label": "New Passport No"
+  },
+  {
+   "fieldname": "new_passport_issue_date",
+   "fieldtype": "Date",
+   "label": "New Passport Issue Date"
+  },
+  {
+   "fieldname": "new_passport_expiry_date",
+   "fieldtype": "Date",
+   "label": "New Passport Expiry Date"
+  },
+  {
+   "fieldname": "action_on",
+   "fieldtype": "Select",
+   "label": "Action On",
+   "options": "\nIqama\nExit Re-Entry Visa\nFinal Exit Visa\nPassport"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-26 13:32:00.870212",
+ "modified_by": "Administrator",
+ "module": "Muqeem",
+ "name": "Muqeem Management",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
